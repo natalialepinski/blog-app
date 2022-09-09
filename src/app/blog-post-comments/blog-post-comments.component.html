@@ -1,0 +1,34 @@
+<div class="container pt-2 pb-2">
+  <div class="row">
+    <div class="col-sm-24">
+      <section>
+        <h5 class="text-left mt-3">
+          <i class="bi bi-chat"></i>
+          <b> Comments ({{ post_comments.length }})</b>
+        </h5>
+        <span *ngIf="post_comments.length > 0; else noComments">
+          <div *ngFor="let comment of post_comments; let i = index" class="shadow p-4">
+            <app-blog-post-comment [comment]="comment" [has_reply]="true" (hasNewReply)="newCommentAdd($event)"></app-blog-post-comment>
+            <span *ngIf="replies.length > 0;">
+              <span *ngFor="let reply of replies">
+                <div class="row container__replies" *ngIf="reply.parent_id == comment.id">
+                  <app-blog-post-comment [comment]="reply" [has_reply]="false"></app-blog-post-comment>
+                </div>
+              </span>
+            </span>
+          </div>
+        </span>
+      </section>
+    </div>
+  </div>
+</div>
+<ng-template #noComments>
+  <div class="row mb-4">
+    <div class="col-sm-24">
+      <p>No comments. Be the first to comment.</p>
+    </div>
+  </div>
+</ng-template>
+<section>
+  <app-blog-post-comment-form [post_id]="post_id" (newCommentAdd)="newCommentAdd($event)"></app-blog-post-comment-form>
+</section>

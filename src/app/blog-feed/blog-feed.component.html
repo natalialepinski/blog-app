@@ -1,0 +1,13 @@
+<div class="row card-group m-3">
+  <div class="col-sm-4 p-3" *ngFor="let post of posts">
+    <div class="card shadow">
+      <div class="card-body">
+        <span>{{ post.publish_date | date: "shortDate" }}</span>
+        <h3 class="card-title mb-0" [innerHTML]="post.title"></h3>
+        <span class="card-subtitle mb-2 text-muted">by {{ post.author }}</span>
+        <p class="card-text mt-2" [innerHTML]="post.description"></p>
+        <a [routerLink]="['/post', post.id, post.slug]" class="btn btn-primary">READ MORE</a>
+      </div>
+    </div>
+  </div>
+</div>

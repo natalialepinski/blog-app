@@ -1,0 +1,22 @@
+<main class="mt-2">
+  <div class="container pb-2">
+    <div class="row border-bottom">
+      <div class="col-sm-24 mb-4">
+        <section class="border-bottom mb-4">
+          <div class="row mb-2">
+            <div class="col-sm-24 text-center mb-3">
+              <h1 [innerHTML]="post.title"></h1>
+              <span>Published {{ post.publish_date | date: "shortDate"}} by {{ post.author }}</span>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div [innerHTML]="post.content" class="text-justify m-2"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+<section>
+  <app-blog-post-comments [post_id]="post_id"></app-blog-post-comments>
+</section>

@@ -1,0 +1,18 @@
+div {
+  span {
+    color: var(--grey);
+    font-size: 14px;
+  }
+
+  a {
+    background-color: var(--primary);
+    border: 0;
+  }
+}
+
+/* Modifying the btn-primary colors */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: var(--active);
+  border: 0;
+}

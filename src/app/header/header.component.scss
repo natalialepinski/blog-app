@@ -1,0 +1,16 @@
+header {
+  .navbar {
+    background-color: var(--primary);
+    color: white;
+
+    a {
+      padding-left: 15px;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

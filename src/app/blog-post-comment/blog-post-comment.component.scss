@@ -1,0 +1,26 @@
+.container {
+  max-width: 80%;
+
+  &__user {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+
+  &__date {
+    font-size: 12px;
+  }
+
+  &__replies {
+    margin-bottom: 10px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  section {
+    padding-left: 20px;
+  }
+}

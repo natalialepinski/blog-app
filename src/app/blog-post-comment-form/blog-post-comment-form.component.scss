@@ -1,0 +1,39 @@
+.container {
+  max-width: 80%;
+
+  .alert {
+    color: red;
+    padding: 0;
+  }
+
+  .div_buttons {
+    height: 50px;
+
+    &__span {
+      float: right;
+    }
+
+    &__submit {
+      border: 1px solid var(--primary);;
+      background-color: var(--primary);
+      color: #fff;
+
+      &:hover, &:focus, &:active {
+        border: 1px solid var(--active);
+        background-color: var(--active);
+      }
+    }
+
+    &__cancel {
+      border: 1px solid var(--primary);
+      background-color: transparent;
+      color: var(--primary);
+
+      &:hover, &:focus, &:active {
+        border: 1px solid var(--active);
+        background-color: var(--active);
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --primary: #009ead;
+  --secondary: #213f66;
+  --padding: 15px;
+  --white: #fff;
+  --grey: #405040;
+  --active: #21b1aa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  font-family: "Source Sans Pro", "Nunito Sans", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+
